@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zombie Apocalypse Shooter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Start Overlay -->
+  <div id="overlay">
+    <button id="startBtn">Start Apocalypse</button>
+  </div>
+
+  <!-- Heads-Up Display -->
+  <div id="hud">
+    <div id="waveInfo">Wave 1 in 10s</div>
+
+    <div id="healthContainer">
+      <span>HEALTH</span>
+      <div id="healthBar"></div>
+    </div>
+
+    <div id="ammoUI">
+      <span id="ammoCount">30</span> / <span id="magSize">30</span>
+      <span id="reloadPrompt">[R] to Reload</span>
+    </div>
+
+    <div id="powerUpMsg"></div>
+  </div>
+
+  <!-- Crosshair Placeholder -->
+  <div id="crosshair"></div>
+
+  <!-- Three.js & Extensions -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/PointerLockControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/postprocessing/SAOPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/shaders/FXAAShader.js"></script>
+
+  <!-- Main Game Script -->
+  <script src="script.js"></script>
+</body>
+</html>
