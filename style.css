@@ -1,0 +1,56 @@
+/* Reset & Base */
+html, body { margin:0; padding:0; overflow:hidden; font-family:sans-serif; }
+
+/* Start Overlay */
+#overlay {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.85); display:flex;
+  align-items:center; justify-content:center; z-index:50;
+}
+#overlay button {
+  padding:1rem 2rem; font-size:1.3rem; cursor:pointer;
+}
+
+/* HUD Layout */
+#hud {
+  position:absolute; top:10px; left:10px; right:10px;
+  color:#fff; z-index:20; pointer-events:none;
+}
+#waveInfo { font-size:1.2rem; margin-bottom:8px; }
+
+/* Health Bar */
+#healthContainer {
+  width:250px; background:#222; border:1px solid #555; margin-bottom:8px;
+}
+#healthBar {
+  height:20px; width:100%; background:#0f0; transition:width .2s ease;
+}
+
+/* Ammo & Reload */
+#ammoUI { font-size:1.1rem; margin-bottom:8px; }
+#reloadPrompt {
+  margin-left:12px; color:#faa; font-size:.9rem; display:none;
+}
+
+/* Power-Up Message */
+#powerUpMsg {
+  position:absolute; bottom:20px; left:50%;
+  transform:translateX(-50%); color:#ff0; font-size:1.2rem;
+  text-shadow:0 0 6px #000;
+}
+
+/* Crosshair */
+#crosshair {
+  position:absolute; top:50%; left:50%;
+  width:20px; height:20px; margin:-10px 0 0 -10px;
+  pointer-events:none; z-index:10;
+}
+#crosshair::before, #crosshair::after {
+  content:""; position:absolute; background:#fff;
+}
+#crosshair::before {
+  left:50%; top:0; width:2px; height:20px; margin-left:-1px;
+}
+#crosshair::after {
+  top:50%; left:0; height:2px; width:20px; margin-top:-1px;
+}
